@@ -5,7 +5,7 @@ phases:
       - mvn clean install
       - echo Logging in the Amazon ECR
       - aws --version
-      - $(aws ecr get-login --region $AWS_DEFAULT_REGION --no-include-email)
+      - $(aws ecr get-login --region ap-northeast-1 --no-include-email)
       - REPOSITORY_URI = 113724943410.dkr.ecr.ap-northeast-1.amazonaws.com/lambada-support-registery
       - COMMIT HASH=$(echo $CODEBUILD_RESOLVED_SOURCE_VERSION | cut -c 1-7)
       - IMAGE_TAG=build-$(echo $CODEBUILD_BUILD_ID | awk -F":" '{print $2}')
