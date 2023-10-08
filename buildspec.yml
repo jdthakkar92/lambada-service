@@ -8,7 +8,7 @@ phases:
       - docker --version
       - aws ecr get-login-password --region ap-northeast-1 | docker login --username AWS --password-stdin 113724943410.dkr.ecr.ap-northeast-1.amazonaws.com
       - REPOSITORY_URI=113724943410.dkr.ecr.ap-northeast-1.amazonaws.com/lambada-support-registery
-      - IMAGE_TAG=build-build-new
+      - IMAGE_TAG=build-build-one
   build:
     commands:
       - echo Build started on `date`
